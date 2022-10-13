@@ -106,6 +106,7 @@ jobs:
       uses: actions/cache@v1.1.0
       with:
         path: .ccache
+        key: ${{ github.job }}-${{ matrix.os }}
 
     - name: Configure
       shell: cmake -P {0}
